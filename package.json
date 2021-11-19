@@ -1,0 +1,40 @@
+{
+  "name": "vue3-chat-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "dev": " cross-env nodemon -r esm src/server.ts"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "register-service-worker": "^1.7.1",
+    "socket.io": "^4.4.0",
+    "socket.io-client": "^4.4.0",
+    "vue": "^3.0.0",
+    "vue-class-component": "^8.0.0-0",
+    "vue-router": "^4.0.0-0",
+    "vue-uuid": "^2.0.2",
+    "vuex": "^4.0.0-0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-pwa": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "node-sass": "^4.12.0",
+    "nodemon": "^2.0.15",
+    "sass-loader": "^8.0.2",
+    "typescript": "~4.1.5"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
