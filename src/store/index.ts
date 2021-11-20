@@ -16,8 +16,8 @@ export default createStore({
       state.chat = data;
     },
     setMessages(state, data) {
-      state.chat.messages.push(data)
-    }
+      state.chat.messages.push(data);
+    },
   },
   actions: {
     fetchChats({ commit }) {
@@ -43,14 +43,18 @@ export default createStore({
     createChat({ dispatch }, payload) {
       socket.emit("createChat", payload);
     },
-    createMessage({commit}, payload) {
-      socket.emit("createMessage", payload)
+    createMessage({ commit }, payload) {
+      socket.emit("createMessage", payload);
     },
-    sendMessage({commit}) {
+    sendMessage({ commit, dispatch }) {
       socket.on("sendMessage", (data) => {
-        commit("setMessages", data)
-      })
-    }
+        commit("setMessages", data);
+        dispatch("updateChat")
+      });
+    },
+    updateChat({ state }) {
+      socket.emit("updateChat", state.chat)
+    },
   },
   getters: {
     chats: (state) => state.chats,

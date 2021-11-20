@@ -1,7 +1,6 @@
 import { ObjectId } from "mongoose";
 
 export type Chat = {
-  id: _id
   nameChat: string;
   messages: Array<Message>;
 };

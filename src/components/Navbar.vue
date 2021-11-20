@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <router-link class="navbar-brand" tag="a" to="/">Vue 3 Chat-app</router-link>
+      <router-link class="navbar-brand" tag="a" to="/chats">Vue 3 Chat-app</router-link>
       <button
         class="navbar-toggler"
         type="button"

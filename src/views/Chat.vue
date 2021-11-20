@@ -41,7 +41,7 @@ export default defineComponent({
     const chat = computed(() => store.getters.chat);
     const name = ref("");
     const text = ref("");
-    const sendMessage = () => {
+    const sendMessage = (): void => {
       const message: Message = {
         id: uuid.v4(),
         text: text.value,

@@ -6,7 +6,7 @@ const Chats = require("./schema")
 const app = express();
 
 const server = app.listen(5000, () => console.log("Server started"));
-mongoose.connect("mongodb+srv://IvanKazakov:53SoUAj1yIF4IRk8@tire-rus.iamog.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+mongoose.connect("YOUR_API_KEY")
 .then(() => console.log("Database connected"))
 .catch((err) => console.log(err))
 
@@ -38,4 +38,7 @@ io.on("connection", (socket: any) => {
   socket.on("createMessage", (data: Message) => {
     io.to(data.room).emit("sendMessage", data);
   });
+  socket.on("updateChat", async (data: any) => {
+    await Chats.findByIdAndUpdate(data._id, data);
+  })
 });
