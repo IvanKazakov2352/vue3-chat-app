@@ -5,12 +5,17 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "dev": " cross-env nodemon -r esm src/server.ts"
+    "dev": " cross-env nodemon -r esm src/server/server.ts"
   },
   "dependencies": {
+    "axios": "^0.24.0",
+    "cors": "^2.8.5",
     "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
     "esm": "^3.2.25",
     "express": "^4.17.1",
+    "mongodb": "^4.2.0",
+    "mongoose": "^6.0.13",
     "register-service-worker": "^1.7.1",
     "socket.io": "^4.4.0",
     "socket.io-client": "^4.4.0",
